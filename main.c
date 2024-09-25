@@ -12,8 +12,9 @@
 
 
 extern int ft_strlen(char *);
-extern char * ft_strcpy(char *, char *);
+extern char * ft_strcpy(char *dest, const char *src);
 #include <stdio.h>
+#include <string.h>
 
 // extern ssize_t read(int fildes, void *buf, size_t nbyte);
 
@@ -21,10 +22,11 @@ extern char * ft_strcpy(char *, char *);
 
 int main (void)
 {
-	char* str = "Hello";
+	char str[] = "Hello";
+	char str2[50];
 
-	ft_strcpy("World", str);
-	printf("Value: %d\n Str: %s\n ", ft_strlen("Test"), str);
+	ft_strcpy(str2, str);
+	printf("Str: %s\n", str2);
 
 	return (0);
 }

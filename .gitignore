@@ -1,3 +1,4 @@
 *.o
 libasm.a
 libasm.test
+.DS_Store
