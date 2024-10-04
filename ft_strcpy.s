@@ -7,8 +7,8 @@ _ft_strcpy:
 	mov rdx, rdi
 
 strcpy_loop:
-	mov al, byte ptr [rsi] 
-	mov byte ptr [rdi], al 
+	mov al, byte ptr [rsi]
+	mov byte ptr [rdi], al
 	cmp al, 0
 	je return
 	inc rsi

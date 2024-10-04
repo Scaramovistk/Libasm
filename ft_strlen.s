@@ -7,7 +7,6 @@
 
 		mov rax, rdi
 		xor rcx, rcx
-	_ft_strlen.end:
 
 	strlen_loop:
 		xor r8, r8
