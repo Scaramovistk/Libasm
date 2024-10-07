@@ -1,25 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c .                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gscarama <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 11:14:22 by gscarama          #+#    #+#             */
-/*   Updated: 2024/09/16 11:41:45 by gscarama         ###   ########.fr       */
+/*   Created: 2024/10/04 11:14:22 by gscarama          #+#    #+#             */
+/*   Updated: 2024/10/07 11:41:45 by gscarama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-extern int ft_strlen(char *);
-extern char * ft_strcpy(char *dest, const char *src);
-extern int ft_strcmp(const char *s1, const char *s2);
-extern size_t ft_write(int fd, const void *buf, size_t count);
-extern size_t ft_read(int fd, void *buf, size_t count);
-extern char *ft_strdup(const char *s);
+#include "./inc/libasm.h"
 
 int main (void)
 {
@@ -36,8 +27,8 @@ int main (void)
 	// Test 3: ft_strcmp
 	char testStr2[] = "Hello, World!";
 	char testStr3[] = "Hello, world!";
-	int cmp1 = ft_strcmp(testStr1, testStr2);  // identical strings
-	int cmp2 = ft_strcmp(testStr1, testStr3);  // different strings (case-sensitive)
+	int cmp1 = ft_strcmp(testStr1, testStr2);
+	int cmp2 = ft_strcmp(testStr1, testStr3);
 	printf("Test 3 - ft_strcmp:\nComparison of identical strings: %d\nComparison of different strings: %d\n\n", cmp1, cmp2);
 
 	// Test 4: ft_write
@@ -47,7 +38,7 @@ int main (void)
 	// Test 5: ft_read
 	char buf[100];
 	printf("Test 5 - ft_read: Please type some input (max 5 chars): ");
-	ft_read(0, buf, 5);  // read up to 5 characters from stdin
+	ft_read(0, buf, 5);
 	ft_write(1, "You typed: ", 11);
 	ft_write(1, buf, 5);
 	printf("\n\n");

@@ -1,6 +1,6 @@
-.intel_syntax
-.globl _ft_strdup
-.extern _malloc, _ft_strlen, _ft_strcpy
+section .text
+	global _ft_strdup
+	extern _malloc, _ft_strlen, _ft_strcpy
 _ft_strdup:
 	xor rax, rax
 	push rdi

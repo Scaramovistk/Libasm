@@ -1,13 +1,13 @@
-.intel_syntax
-	.globl _ft_strcmp
+section .text
+global _ft_strcmp
 
 _ft_strcmp:
 	push rbp
 	mov rbp, rsp
 
 strcmp_loop:
-	mov al, byte ptr [rsi]
-	mov bl, byte ptr [rdi]
+	mov al, [rsi]
+	mov bl, [rdi]
 	cmp al, bl
 	jne return
 	test al, al
