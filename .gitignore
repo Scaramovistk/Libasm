@@ -1,4 +1,4 @@
 *.o
 libasm.a
 libasm.test
-.DS_Store
+.DS_StorelibasmTester

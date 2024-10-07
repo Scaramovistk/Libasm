@@ -17,8 +17,8 @@ strcmp_loop:
 	jmp strcmp_loop
 
 return:
-	sub al, bl
-	movsx rax, al
+	sub bl, al
+	movsx rax, bl
 	mov rsp, rbp
 	pop rbp
 	ret
